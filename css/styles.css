@@ -1,0 +1,17 @@
+/*Importe de css*/
+
+@import url("./variables.css");
+@import url("./base.css");
+@import url("./encabezado.css");
+@import url("./navegacion.css");
+@import url("./perfil-extra.css");
+@import url("./secciones.css");
+@import url("./tarjetas.css");
+@import url("./buscador-github.css");
+@import url("./tablas.css");
+@import url("./formulario.css");
+@import url("./pie-accesibilidad.css");
+@import url("./responsive.css");
+@import url("./movimiento-reducido.css");
+
+

@@ -1,0 +1,120 @@
+.experiencia-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 230px), 1fr)
+    );
+    gap: 1.25rem;
+}
+
+.experiencia-grid article {
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--border_color);
+    border-radius: var(--radius);
+    background-color: var(--surface_color);
+    box-shadow: var(--shadow);
+    overflow-wrap: anywhere;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experiencia-grid article:hover {
+    transform: translateY(-4px);
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 230px), 1fr)
+    );
+    gap: 1.25rem;
+}
+
+.habilidad {
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--border_color);
+    border-radius: var(--radius);
+    background-color: var(--surface_color);
+    box-shadow: var(--shadow);
+    overflow-wrap: anywhere;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.habilidad:hover {
+    transform: translateY(-4px);
+}
+
+.objectives_grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 220px), 1fr)
+    );
+    gap: 1.25rem;
+}
+
+.objective_card {
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid var(--border_color);
+    border-radius: var(--radius);
+    background: var(--surface_color);
+    overflow-wrap: anywhere;
+}
+
+.objective_icon {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+}
+
+.repositories_grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 230px), 1fr)
+    );
+    gap: 1.25rem;
+}
+
+.repository_card {
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--border_color);
+    border-radius: var(--radius);
+    background: var(--surface_color);
+    overflow-wrap: anywhere;
+}
+
+.repository_card h3 {
+    margin-top: 0;
+    overflow-wrap: anywhere;
+}
+
+.repository_card a {
+    color: var(--accent_color);
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+    .experiencia-grid,
+    .habilidades-grid,
+    .objectives_grid,
+    .repositories_grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .experiencia-grid article,
+    .habilidad {
+        transition: none;
+    }
+
+    .experiencia-grid article:hover,
+    .habilidad:hover {
+        transform: none;
+    }
+}
