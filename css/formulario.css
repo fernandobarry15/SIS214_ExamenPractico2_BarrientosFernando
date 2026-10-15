@@ -1,0 +1,166 @@
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--accent_color);
+    outline-offset: 3px;
+}
+
+::selection {
+    background: var(--accent_color);
+    color: #ffffff;
+}
+
+#contact_form {
+    display: grid;
+    gap: 12px;
+    width: 100%;
+    max-width: 700px;
+    margin: 1.5rem auto;
+    padding: clamp(1rem, 4vw, 2rem);
+    border: 1px solid var(--border_color);
+    border-radius: var(--radius);
+    background: var(--surface_color);
+    box-shadow: var(--shadow);
+}
+
+#contact_form label {
+    margin-top: 6px;
+    color: var(--text_color);
+    font-weight: 600;
+}
+
+#contact_form input:not([type="checkbox"]),
+#contact_form select,
+#contact_form textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--border_color);
+    border-radius: 8px;
+    background: var(--background_color);
+    color: var(--text_color);
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contact_form input:not([type="checkbox"]):focus,
+#contact_form select:focus,
+#contact_form textarea:focus {
+    border-color: var(--accent_color);
+    box-shadow: 0 0 0 3px
+        color-mix(in srgb, var(--accent_color) 18%, transparent);
+    outline: none;
+}
+
+#contact_form input::placeholder,
+#contact_form textarea::placeholder {
+    color: var(--muted_color);
+    opacity: 1;
+}
+
+#contact_form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contact_form input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent_color);
+    vertical-align: middle;
+}
+
+#contact_form button {
+    justify-self: start;
+    max-width: 100%;
+    margin-top: 8px;
+    padding: 12px 22px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: var(--accent_color);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+#contact_form button:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+}
+
+#contact_form button:active {
+    transform: translateY(0);
+}
+
+#form_message {
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--text_color);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+#print_cv_button,
+.cv_contact_link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 12px 18px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: var(--accent_color);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+#print_cv_button:hover,
+.cv_contact_link:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+    #contact_form {
+        padding: 1rem;
+        gap: 10px;
+    }
+
+    #contact_form button {
+        width: 100%;
+        justify-self: stretch;
+    }
+
+    #print_cv_button,
+    .cv_contact_link {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #contact_form input,
+    #contact_form select,
+    #contact_form textarea,
+    #contact_form button,
+    #print_cv_button,
+    .cv_contact_link {
+        transition: none;
+    }
+
+    #contact_form button:hover,
+    #print_cv_button:hover,
+    .cv_contact_link:hover {
+        transform: none;
+    }
+}
